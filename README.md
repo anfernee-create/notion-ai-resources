@@ -281,7 +281,8 @@ If you find this repository helpful:
 
 - **Issues**: [GitHub Issues](https://github.com/anfernee-create/notion-ai-resources/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/anfernee-create/notion-ai-resources/discussions)
-- **Twitter**: [@YourHandle](https://twitter.com/yourhandle)
+- **Twitter**: [@anferneeck](https://twitter.com/anferneeck)
+- - **Threads**: [@anferneeck](https://www.threads.net/@anferneeck)
 
 ---
 
