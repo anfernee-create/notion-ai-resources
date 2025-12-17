@@ -249,7 +249,6 @@ While Discord is popular, some Notion AI communities use:
 ## 📚 Additional Resources
 
 ### Related Documentation
-- [Community Guidelines](community-guidelines.md)
 - [Blog Posts](../learning/blog-posts.md) - Learn from community members
 - [Case Studies](../learning/case-studies.md) - Real-world examples
 
