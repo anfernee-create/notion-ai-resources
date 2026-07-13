@@ -2,13 +2,24 @@
 # Perfect for solopreneurs managing content workflows
 
 from notion_client import Client
+import atexit
 import os
 from dotenv import load_dotenv
+from posthog import Posthog
 
 load_dotenv()
 
 notion = Client(auth=os.environ["NOTION_TOKEN"])
 database_id = os.environ["NOTION_DATABASE_ID"]
+
+posthog_client = Posthog(
+    os.environ["POSTHOG_PROJECT_TOKEN"],
+    host=os.environ.get("POSTHOG_HOST", "https://us.i.posthog.com"),
+    enable_exception_autocapture=True,
+)
+atexit.register(posthog_client.shutdown)
+
+SCRIPT_USER_ID = "query-database-script"
 
 def query_database(database_id, filter_params=None, sorts=None):
     """Query database with optional filters and sorting"""
@@ -21,6 +32,7 @@ def query_database(database_id, filter_params=None, sorts=None):
         return response["results"]
     except Exception as e:
         print(f"✗ Error querying database: {e}")
+        posthog_client.capture_exception(e, SCRIPT_USER_ID)
         return []
 
 # Example 1: Get all published posts
@@ -29,13 +41,25 @@ def get_published_posts():
         "property": "Status",
         "select": {"equals": "Published"}
     }
-    return query_database(database_id, filter_params)
+    results = query_database(database_id, filter_params)
+    posthog_client.capture(
+        distinct_id=SCRIPT_USER_ID,
+        event="published_posts_fetched",
+        properties={"result_count": len(results)},
+    )
+    return results
 
 # Example 2: Get recent content (sorted by date)
 def get_recent_content(limit=10):
     sorts = [{"property": "Created", "direction": "descending"}]
-    results = query_database(database_id, sorts=sorts)
-    return results[:limit]
+    all_results = query_database(database_id, sorts=sorts)
+    results = all_results[:limit]
+    posthog_client.capture(
+        distinct_id=SCRIPT_USER_ID,
+        event="recent_content_fetched",
+        properties={"limit": limit, "result_count": len(results)},
+    )
+    return results
 
 # Example 3: Filter by multiple tags
 def get_posts_by_tags(tags):
@@ -45,7 +69,13 @@ def get_posts_by_tags(tags):
             for tag in tags
         ]
     }
-    return query_database(database_id, filter_params)
+    results = query_database(database_id, filter_params)
+    posthog_client.capture(
+        distinct_id=SCRIPT_USER_ID,
+        event="posts_by_tags_fetched",
+        properties={"tag_count": len(tags), "result_count": len(results)},
+    )
+    return results
 
 # Example 4: Get drafts older than a date
 def get_old_drafts(date_str="2024-01-01"):
@@ -55,7 +85,13 @@ def get_old_drafts(date_str="2024-01-01"):
             {"property": "Created", "date": {"before": date_str}}
         ]
     }
-    return query_database(database_id, filter_params)
+    results = query_database(database_id, filter_params)
+    posthog_client.capture(
+        distinct_id=SCRIPT_USER_ID,
+        event="old_drafts_fetched",
+        properties={"cutoff_date": date_str, "result_count": len(results)},
+    )
+    return results
 
 if __name__ == "__main__":
     # Test queries

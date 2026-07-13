@@ -4,18 +4,32 @@ Notion API Database Operations - Python Examples
 Demonstrates CRUD operations on Notion databases using the official Python SDK.
 
 Installation:
-pip install notion-client
+pip install notion-client posthog python-dotenv
 """
 
+import atexit
 import os
 from notion_client import Client
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+from posthog import Posthog
+
+load_dotenv()
 
 # Initialize the Notion client
 notion = Client(auth=os.environ.get("NOTION_API_KEY"))
 
 # Example database ID (replace with your own)
 DATABASE_ID = "your-database-id-here"
+
+posthog_client = Posthog(
+    os.environ["POSTHOG_PROJECT_TOKEN"],
+    host=os.environ.get("POSTHOG_HOST", "https://us.i.posthog.com"),
+    enable_exception_autocapture=True,
+)
+atexit.register(posthog_client.shutdown)
+
+SCRIPT_USER_ID = "database-operations-script"
 
 
 def query_database(database_id, filter_params=None, sorts=None):
@@ -40,10 +54,21 @@ def query_database(database_id, filter_params=None, sorts=None):
             query_payload["sorts"] = sorts
         
         response = notion.databases.query(**query_payload)
-        return response["results"]
-    
+        results = response["results"]
+        posthog_client.capture(
+            distinct_id=SCRIPT_USER_ID,
+            event="database_queried",
+            properties={
+                "has_filter": filter_params is not None,
+                "has_sort": sorts is not None,
+                "result_count": len(results),
+            },
+        )
+        return results
+
     except Exception as e:
         print(f"Error querying database: {e}")
+        posthog_client.capture_exception(e, SCRIPT_USER_ID)
         return []
 
 
@@ -120,10 +145,16 @@ def create_page(database_id, properties):
             properties=properties
         )
         print(f"Created page: {new_page['id']}")
+        posthog_client.capture(
+            distinct_id=SCRIPT_USER_ID,
+            event="page_created",
+            properties={"property_count": len(properties)},
+        )
         return new_page
-    
+
     except Exception as e:
         print(f"Error creating page: {e}")
+        posthog_client.capture_exception(e, SCRIPT_USER_ID)
         return None
 
 
@@ -184,10 +215,16 @@ def update_page(page_id, properties):
             properties=properties
         )
         print(f"Updated page: {page_id}")
+        posthog_client.capture(
+            distinct_id=SCRIPT_USER_ID,
+            event="page_updated",
+            properties={"updated_property_count": len(properties)},
+        )
         return updated_page
-    
+
     except Exception as e:
         print(f"Error updating page: {e}")
+        posthog_client.capture_exception(e, SCRIPT_USER_ID)
         return None
 
 
@@ -207,8 +244,15 @@ def mark_task_complete(page_id):
             }
         }
     }
-    
-    return update_page(page_id, properties)
+
+    result = update_page(page_id, properties)
+    if result:
+        posthog_client.capture(
+            distinct_id=SCRIPT_USER_ID,
+            event="task_marked_complete",
+            properties={},
+        )
+    return result
 
 
 def get_page(page_id):
@@ -326,10 +370,16 @@ def archive_page(page_id):
             archived=True
         )
         print(f"Archived page: {page_id}")
+        posthog_client.capture(
+            distinct_id=SCRIPT_USER_ID,
+            event="page_archived",
+            properties={},
+        )
         return archived_page
-    
+
     except Exception as e:
         print(f"Error archiving page: {e}")
+        posthog_client.capture_exception(e, SCRIPT_USER_ID)
         return None
 
 
@@ -393,10 +443,21 @@ def search_pages(query, filter_type=None):
             search_params["filter"] = {"property": "object", "value": filter_type}
         
         response = notion.search(**search_params)
-        return response["results"]
-    
+        results = response["results"]
+        posthog_client.capture(
+            distinct_id=SCRIPT_USER_ID,
+            event="pages_searched",
+            properties={
+                "query_length": len(query),
+                "filter_type": filter_type,
+                "result_count": len(results),
+            },
+        )
+        return results
+
     except Exception as e:
         print(f"Error searching: {e}")
+        posthog_client.capture_exception(e, SCRIPT_USER_ID)
         return []
 
 
