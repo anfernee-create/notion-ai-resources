@@ -3,9 +3,23 @@
 
 from notion_client import Client
 import os
+import atexit
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+from posthog import Posthog
+
+load_dotenv()
 
 notion = Client(auth=os.environ["NOTION_TOKEN"])
+
+posthog_client = Posthog(
+    os.environ["POSTHOG_PROJECT_TOKEN"],
+    host=os.environ.get("POSTHOG_HOST", "https://us.i.posthog.com"),
+    enable_exception_autocapture=True,
+)
+atexit.register(posthog_client.shutdown)
+
+SCRIPT_USER_ID = "automation-script"
 
 def archive_completed_tasks(db_id, days=30):
     """Archive old completed tasks"""
@@ -19,7 +33,13 @@ def archive_completed_tasks(db_id, days=30):
     )
     for page in results["results"]:
         notion.pages.update(page_id=page["id"], archived=True)
-    print(f"Archived {len(results['results'])} tasks")
+    archived_count = len(results["results"])
+    print(f"Archived {archived_count} tasks")
+    posthog_client.capture(
+        distinct_id=SCRIPT_USER_ID,
+        event="tasks_archived",
+        properties={"archived_count": archived_count, "cutoff_days": days},
+    )
 
 def auto_tag_content(db_id):
     """Auto-tag based on keywords"""
@@ -36,6 +56,18 @@ def auto_tag_content(db_id):
                 tags.append({"name": tag})
         if tags:
             notion.pages.update(page_id=page["id"], properties={"Tags": {"multi_select": tags}})
+    tagged_count = sum(
+        1 for page in results["results"]
+        if any(
+            any(k in page["properties"].get("Name", {}).get("title", [{}])[0].get("plain_text", "").lower() for k in keywords)
+            for keywords in tags_map.values()
+        )
+    )
+    posthog_client.capture(
+        distinct_id=SCRIPT_USER_ID,
+        event="content_auto_tagged",
+        properties={"tagged_count": tagged_count, "total_pages": len(results["results"])},
+    )
 
 if __name__ == "__main__":
     db_id = os.environ.get("NOTION_DATABASE_ID")
