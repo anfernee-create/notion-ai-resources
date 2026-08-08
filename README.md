@@ -1,3 +1,5 @@
+
+
 # Awesome Notion AI Resources
 
 > 🚀 A comprehensive collection of everything Notion AI - resources, templates, integrations, guides, prompts, and automations for productivity enthusiasts, solopreneurs, developers, and teams.
@@ -149,7 +151,7 @@ This repository is your **complete guide to Notion AI** - featuring:
 
 - **JavaScript**: [Query](api/examples/javascript/basic-query.js) | [Create](api/examples/javascript/create-page.js) | [Update](api/examples/javascript/update-database.js)
 - **Python**: [Setup](api/examples/python/setup.py) | [Query](api/examples/python/query-database.py) | [Automation](api/examples/python/automation-script.py)
-- **PHP**: [Client](api/examples/php/notion-ai-client.php)
+- **PHP**: [Client](api/examples/php/crud-operations.php)
 
 ### Integrations
 
