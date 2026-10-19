@@ -8,7 +8,7 @@ Welcome to Notion! This comprehensive guide will help you set up and optimize No
 3. [Understanding the Basics](#understanding-the-basics)
 4. [Essential Setup for Solopreneurs](#essential-setup-for-solopreneurs)
 5. [Building Your First Pages](#building-your-first-pages)
-6. [Productivity Tips](#productivity-tips)
+6. [Productivity Tips](#productivity-tips-for-solopreneurs)
 7. [Next Steps](#next-steps)
 
 ---

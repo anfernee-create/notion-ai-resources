@@ -29,8 +29,8 @@
 This repository is your **complete guide to Notion AI** - featuring:
 
 - **📖 Comprehensive Documentation** - From beginner guides to advanced workflows
-- **✨ 500+ AI Prompts** - Ready-to-use prompts for content, analysis, automation
-- **📋 50+ Templates** - Pre-built Notion templates with AI integration
+- **✨ 17 AI Prompt guides** - Ready-to-use prompts for content, analysis, automation (Markdown files under `prompts/`, counted 19 Oct 2026)
+- **📋 18 Templates** - Pre-built Notion templates with AI integration (Markdown files under `templates/`, excluding the folder README, counted 19 Oct 2026)
 - **🔌 API Examples** - Code snippets in JavaScript, Python, PHP
 - **⚡ Automation Workflows** - Step-by-step automation guides
 - **🎓 Tutorials** - Beginner to advanced learning paths
@@ -50,7 +50,7 @@ This repository is your **complete guide to Notion AI** - featuring:
 
 ### Ready to Build?
 
-- **Browse [Prompts Library](prompts/)** - Copy and use 500+ tested prompts
+- **Browse [Prompts Library](prompts/)** - Copy and use the prompt guides in this repo
 - **Explore [Templates](templates/)** - Download pre-built systems
 - **Check [Use Cases](use-cases/)** - See real-world examples
 - **Learn [Automations](automations/)** - Build powerful workflows
@@ -243,7 +243,7 @@ This repository is your **complete guide to Notion AI** - featuring:
 
 - [Reddit r/Notion](https://reddit.com/r/Notion)
 - [Twitter/X Communities](https://twitter.com/search?q=%23NotionAI)
-- [GitHub Discussions](https://github.com/anfernee-create/notion-ai-resources/discussions)
+- [GitHub Issues](https://github.com/anfernee-create/notion-ai-resources/issues)
 
 ### Learning
 
@@ -309,7 +309,7 @@ If you find this repository helpful:
 ## 📞 Contact & Support
 
 - **Issues**: [GitHub Issues](https://github.com/anfernee-create/notion-ai-resources/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/anfernee-create/notion-ai-resources/discussions)
+- **Discussions**: [GitHub Issues](https://github.com/anfernee-create/notion-ai-resources/issues)
 - **Twitter**: [@anferneeck](https://twitter.com/anferneeck)
 - **Threads**: [@anferneeck](https://www.threads.net/@anferneeck)
 
@@ -334,5 +334,5 @@ If you find this repository helpful:
 
 ---
 
-**Last Updated**: April 2026
+**Last Updated**: October 2026
 **Repository Stats**: [![Stars](https://img.shields.io/github/stars/anfernee-create/notion-ai-resources)](https://github.com/anfernee-create/notion-ai-resources/stargazers) [![Forks](https://img.shields.io/github/forks/anfernee-create/notion-ai-resources)](https://github.com/anfernee-create/notion-ai-resources/network/members) [![Issues](https://img.shields.io/github/issues/anfernee-create/notion-ai-resources)](https://github.com/anfernee-create/notion-ai-resources/issues)

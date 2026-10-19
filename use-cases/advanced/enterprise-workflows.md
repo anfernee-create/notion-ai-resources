@@ -90,7 +90,7 @@ Track these metrics:
 ## Related
 
 - [100 AI Agent Use Cases](100-agent-use-cases.md)
-- [Notion 3.0 Agents](../automations/ai-agents/notion-3-agents.md)
+- [Notion 3.0 Agents](../../automations/ai-agents/notion-3-agents.md)
 
 ---
 
