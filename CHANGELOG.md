@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1] - 2026-10-19
+
+### Fixed
+- Six paths were folders named like Markdown files (`api/authentication.md`, `api/api-overview.md`, four in `docs/best-practices/`). Each is now a proper file at the same path.
+- 16 broken internal links across use-cases, API docs, learning resources and getting-started docs
+- Garbled characters in `LINK-AUDIT-REPORT.md`
+
+### Changed
+- Merged `Templates/`, `Resources/`, `Guides/` and `AI-Integrations/` into their lowercase folders. See `LINK-AUDIT-REPORT.md` for the old and new paths.
+
+### Added
+- GitHub Action to check internal links on every push and pull request
+
+---
+
 ## [1.3.0] - 2026-04-13
 
 ### Fixed

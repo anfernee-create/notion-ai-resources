@@ -300,7 +300,7 @@ class MockNotionAPI:
 ## Related Documentation
 
 - [API Overview](./api-overview.md)
-- [Endpoints Reference](./endpoints-reference.md)
+- [Endpoints Reference](./documentation/endpoints-reference.md)
 - [Security Best Practices](https://developers.notion.com/docs/getting-started/page-limits)
 - [OAuth Documentation](https://developers.notion.com/docs/getting-started/page-limits)
 
