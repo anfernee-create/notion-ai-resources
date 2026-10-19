@@ -191,13 +191,13 @@ Create a linked database with:
 ### 🔔 Notifications & Updates
 
 **Recent Updates**
-- [DATE]: [UPDATE_DESCRIPTION]
-- [DATE]: [UPDATE_DESCRIPTION]
-- [DATE]: [UPDATE_DESCRIPTION]
+- [DATE] - [UPDATE_DESCRIPTION]
+- [DATE] - [UPDATE_DESCRIPTION]
+- [DATE] - [UPDATE_DESCRIPTION]
 
 **Upcoming Items**
-- [DATE]: [EVENT/DEADLINE]
-- [DATE]: [EVENT/DEADLINE]
+- [DATE] - [EVENT/DEADLINE]
+- [DATE] - [EVENT/DEADLINE]
 
 ## Setup Instructions
 

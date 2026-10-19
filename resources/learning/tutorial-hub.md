@@ -220,7 +220,7 @@ For comprehensive written tutorials, see:
 
 Missing a tutorial? Submit a request:
 
-1. Open an [Issue](../../issues) with tag `tutorial-request`
+1. Open an [Issue](https://github.com/anfernee-create/notion-ai-resources/issues) with tag `tutorial-request`
 2. Describe what you want to learn
 3. Share your use case
 4. Community will help create it!
@@ -268,4 +268,4 @@ See [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
 
 **Last Updated:** April 2026
 **Maintainer:** [@anferneeck](https://twitter.com/anferneeck)
-**Questions?** Open an [issue](../../issues) or join the [discussion](../../discussions).
+**Questions?** Open an [issue](https://github.com/anfernee-create/notion-ai-resources/issues) or join the [discussion](https://github.com/anfernee-create/notion-ai-resources/discussions).

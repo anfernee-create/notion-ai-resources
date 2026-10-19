@@ -308,9 +308,9 @@ A comprehensive collection of real-world case studies demonstrating how individu
 
 ### Related Documentation
 
-- [Notion AI Best Practices](../api/authentication.md)
+- [Notion AI Best Practices](../../docs/best-practices/workflow-optimization.md)
 - [Tutorial Hub](tutorial-hub.md)
-- [Workflow Templates](../templates/)
+- [Workflow Templates](../../templates/)
 
 ### Community Resources
 

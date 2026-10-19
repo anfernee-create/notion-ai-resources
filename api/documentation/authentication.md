@@ -303,7 +303,7 @@ If you encounter authentication issues:
 
 1. Check [Notion API Status](https://status.notion.so/)
 2. Review [Notion Developer Community](https://developers.notion.com/)
-3. Post in [GitHub Discussions](../../discussions)
+3. Post in [GitHub Discussions](https://github.com/anfernee-create/notion-ai-resources/discussions)
 
 ---
 

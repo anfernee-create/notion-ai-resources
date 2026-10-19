@@ -131,9 +131,9 @@ Each use case follows the same pattern:
 4. **Trigger**: Decide when the agent runs (on creation, on schedule, on demand)
 
 For detailed implementation guides, see:
-- [Notion 3.0 Agents](../automations/ai-agents/notion-3-agents.md)
-- [Multi-Step Workflows](../automations/ai-agents/multi-step-workflows.md)
-- [Scheduled Agents](../automations/ai-agents/scheduled-agents.md)
+- [Notion 3.0 Agents](../../automations/ai-agents/notion-3-agents.md)
+- [Multi-Step Workflows](../../automations/ai-agents/multi-step-workflows.md)
+- [Scheduled Agents](../../automations/ai-agents/scheduled-agents.md)
 
 ---
 

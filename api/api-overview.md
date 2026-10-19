@@ -294,8 +294,8 @@ if (response.status === 429) {
 ## Related Documentation
 
 - [Authentication](./authentication.md)
-- [Endpoints Reference](./endpoints-reference.md)
-- [Code Examples](../examples/)
+- [Endpoints Reference](./documentation/endpoints-reference.md)
+- [Code Examples](./examples/)
 - [API Reference](https://developers.notion.com/reference)
 
 ---
