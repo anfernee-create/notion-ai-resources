@@ -6,17 +6,16 @@ Notion databases can grow rapidly and become slow or difficult to manage without
 
 ## Table of Contents
 
-1. [Database Structure Optimization](#structure)
-2. [Property Management](#properties)
-3. [Query Performance](#queries)
-4. [Formula Optimization](#formulas)
-5. [Relation & Rollup Strategies](#relations)
-6. [Database Linking](#linking)
-7. [Workspace Organization](#organization)
-8. [Performance Monitoring](#monitoring)
+1. [Database Structure Optimization](#database-structure-optimization)
+2. [Property Management](#property-management)
+3. [Query Performance](#query-performance)
+4. [Formula Optimization](#formula-optimization)
+5. [Relation & Rollup Strategies](#relation-rollup-strategies)
+6. [Database Linking](#database-linking)
+7. [Workspace Organization](#workspace-organization)
+8. [Performance Monitoring](#performance-monitoring)
 
-## Database Structure Optimization {#structure}
-
+## Database Structure Optimization
 ### 1. Primary Key Selection
 
 Choose an appropriate primary key (title field):
@@ -49,8 +48,7 @@ Divide large databases for better performance:
 - Split by category: Different project types
 - Split by team: Department-specific databases
 
-## Property Management {#properties}
-
+## Property Management
 ### 1. Property Types Selection
 
 **Efficient Types**:
@@ -86,8 +84,7 @@ Minimize unused properties:
 - Use conditional properties where applicable
 - Consolidate similar properties
 
-## Query Performance {#queries}
-
+## Query Performance
 ### 1. Filtering Optimization
 
 **Fast Filters**:
@@ -132,8 +129,7 @@ OR (Owner is "John" AND Due Date is within 7 days)
 - Implement status fields for quick filtering
 - Use tags/categories for classification
 
-## Formula Optimization {#formulas}
-
+## Formula Optimization
 ### 1. Formula Complexity
 
 **Simple Formulas** (fast):
@@ -170,8 +166,7 @@ Instead of complex formulas:
 - Create database templates
 - Use rollups instead of aggregating manually
 
-## Relation & Rollup Strategies {#relations}
-
+## Relation & Rollup Strategies
 ### 1. Relation Best Practices
 
 ```
@@ -210,8 +205,7 @@ Allows:
 - Include additional metadata (role, hours spent)
 ```
 
-## Database Linking {#linking}
-
+## Database Linking
 ### 1. Linking Strategies
 
 **One-to-Many**:
@@ -240,8 +234,7 @@ Teams ↔ Projects (through junction database)
 - Bidirectional connections
 - Aggregations and calculations
 
-## Workspace Organization {#organization}
-
+## Workspace Organization
 ### 1. Database Naming Conventions
 
 ```
@@ -271,8 +264,7 @@ Examples:
 - Use API for programmatic backups
 - Document critical database schemas
 
-## Performance Monitoring {#monitoring}
-
+## Performance Monitoring
 ### 1. Metrics to Track
 
 - **Database Size**: Number of records, total properties

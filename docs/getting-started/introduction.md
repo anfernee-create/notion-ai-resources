@@ -153,7 +153,7 @@ While powerful, Notion AI has some constraints:
 - [Official Notion AI Documentation](https://www.notion.so/help/guides/notion-ai)
 - [Notion AI Blog](https://www.notion.so/blog)
 - [Community Forum](https://www.notion.so/community)
-- [Video Tutorials](../resources/video-resources.md)
+- [Video Tutorials](../../resources/learning/tutorial-hub.md)
 
 ---
 

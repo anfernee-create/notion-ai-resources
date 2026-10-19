@@ -1,0 +1,11 @@
+{
+  "name": "notion-ai-resources-examples",
+  "private": true,
+  "description": "JavaScript/Node.js API examples for notion-ai-resources",
+  "dependencies": {
+    "@notionhq/client": "^2.0.0",
+    "axios": "^1.0.0",
+    "node-cache": "^5.1.2",
+    "p-retry": "^5.0.0"
+  }
+}

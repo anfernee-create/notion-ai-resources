@@ -6,16 +6,15 @@ Zapier enables powerful automation by connecting Notion with thousands of applic
 
 ## Table of Contents
 
-1. [Getting Started with Zapier](#getting-started)
-2. [Notion-to-Zapier Triggers](#triggers)
-3. [Common Automation Patterns](#patterns)
-4. [Advanced Workflows](#advanced)
-5. [AI Integration Patterns](#ai)
-6. [Error Handling](#errors)
-7. [Performance Optimization](#optimization)
+1. [Getting Started with Zapier](#getting-started-with-zapier)
+2. [Notion-to-Zapier Triggers](#notion-to-zapier-triggers)
+3. [Common Automation Patterns](#common-automation-patterns)
+4. [Advanced Workflows](#advanced-workflows)
+5. [AI Integration Patterns](#ai-integration-patterns)
+6. [Error Handling](#error-handling)
+7. [Performance Optimization](#performance-optimization)
 
-## Getting Started with Zapier {#getting-started}
-
+## Getting Started with Zapier
 ### 1. Setup Requirements
 
 - Zapier account (Free or Pro plan)
@@ -45,8 +44,7 @@ Zapier enables powerful automation by connecting Notion with thousands of applic
 | Formatting | Yes | Yes | Yes |
 | Premium apps | Limited | Included | Included |
 
-## Notion-to-Zapier Triggers {#triggers}
-
+## Notion-to-Zapier Triggers
 ### 1. Database Item Created
 
 **When to use**: 
@@ -85,8 +83,7 @@ Action: Send email, create calendar event, etc.
 - Can search by multiple properties
 - Better for scheduled tasks
 
-## Common Automation Patterns {#patterns}
-
+## Common Automation Patterns
 ### 1. Form Submission to Notion
 
 ```
@@ -167,8 +164,7 @@ Calendar: Schedule kickoff meeting
 Airtable: Create budget tracking record
 ```
 
-## Advanced Workflows {#advanced}
-
+## Advanced Workflows
 ### 1. Conditional Logic
 
 **Use case**: Different actions based on priority
@@ -233,8 +229,7 @@ Other actions (Slack, email, etc.)
 
 **Use case**: Connect custom applications
 
-## AI Integration Patterns {#ai}
-
+## AI Integration Patterns
 ### 1. OpenAI Content Generation
 
 ```
@@ -298,8 +293,7 @@ Zapier: Conditional routing based on content
   [Feedback] → Add to insights database
 ```
 
-## Error Handling {#errors}
-
+## Error Handling
 ### 1. Task Failure Notifications
 
 **Configure alerts for**:
@@ -336,8 +330,7 @@ IF Zapier action fails:
   5. Don't retry indefinitely
 ```
 
-## Performance Optimization {#optimization}
-
+## Performance Optimization
 ### 1. Reduce API Calls
 
 **Techniques**:

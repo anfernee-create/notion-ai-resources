@@ -6,15 +6,14 @@ A comprehensive collection of customizable email templates designed for use with
 
 ## Table of Contents
 
-1. [Professional Email Templates](#professional)
-2. [Marketing & Engagement](#marketing)
-3. [Notification Templates](#notifications)
-4. [Transactional Emails](#transactional)
-5. [Team Communication](#communication)
-6. [Customization Guide](#customization)
+1. [Professional Email Templates](#professional-email-templates)
+2. [Marketing & Engagement](#marketing-engagement)
+3. [Notification Templates](#notification-templates)
+4. [Transactional Emails](#transactional-emails)
+5. [Team Communication](#team-communication)
+6. [Customization Guide](#customization-guide)
 
-## Professional Email Templates {#professional}
-
+## Professional Email Templates
 ### Template 1: Project Status Update
 
 ```
@@ -123,8 +122,7 @@ Best regards,
 {{manager_name}}
 ```
 
-## Marketing & Engagement {#marketing}
-
+## Marketing & Engagement
 ### Template 4: Newsletter Digest
 
 ```
@@ -233,8 +231,7 @@ Thank you,
 {{company_name}}
 ```
 
-## Notification Templates {#notifications}
-
+## Notification Templates
 ### Template 7: Task Assignment Notification
 
 ```
@@ -327,8 +324,7 @@ Thank you,
 {{workflow_name}}
 ```
 
-## Transactional Emails {#transactional}
-
+## Transactional Emails
 ### Template 10: Order Confirmation
 
 ```
@@ -419,8 +415,7 @@ Your {{product_name}} subscription will automatically renew on {{renewal_date}}.
 Thanks for being a valued customer!
 ```
 
-## Team Communication {#communication}
-
+## Team Communication
 ### Template 13: Team Announcement
 
 ```
@@ -453,8 +448,7 @@ Thanks,
 {{management_name}}
 ```
 
-## Customization Guide {#customization}
-
+## Customization Guide
 ### Using Variables in Templates
 
 Variables use the format `{{variable_name}}` and are replaced with actual data:

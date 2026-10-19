@@ -89,7 +89,7 @@ Workflow:
 4. Refine prompt with more specifics
 5. Repeat until satisfied
 
-##Prompt Structure
+## Prompt Structure
 
 ### Basic Template
 
@@ -345,7 +345,7 @@ Challenge this by asking:
 For each, explain why it matters
 ```
 
-##Common Mistakes
+## Common Mistakes
 
 ### Mistake 1: Too Vague
 

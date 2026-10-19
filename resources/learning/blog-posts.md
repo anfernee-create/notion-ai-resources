@@ -266,4 +266,4 @@ See [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
 
 **Curator:** [@anferneeck](https://twitter.com/anferneeck)
 
-**Submit Articles:** Open an [issue](../../issues) or [pull request](../../pulls)
+**Submit Articles:** Open an [issue](https://github.com/anfernee-create/notion-ai-resources/issues) or [pull request](https://github.com/anfernee-create/notion-ai-resources/pulls)
